@@ -5,6 +5,9 @@ salario = float(input('Salário do comprador: R$ '))
 anos = int(input('Quantos anos de financiamento? '))
 prestacao = casa / (anos * 12)
 minimo = salario * 30 /100
-print('Para pagar uma casa de R$ {:.2f} em {} anos, a prestação será de R$ {:.2f}.'.format(casa, anos, prestacao))
-if prestacao > minimo:
-    print('Empréstimo negado! A prestação de R$ {:.2f} excede 30% do seu salário.'.format(prestacao))
+print('Para pagar uma casa de R$ {:.2f} em {} anos, a prestação será de R$ {:.2f}.'.format(casa, anos), end= '')
+print('O valor máximo da prestação é de R$ {:.2f}.'.format(minimo))
+if prestacao <= minimo:
+    print('Empréstimo negado!')
+else:
+    print('Empréstimo aprovado!')
