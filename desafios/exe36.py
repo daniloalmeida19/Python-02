@@ -1,15 +1,17 @@
-#escreva 1 programa que soma 1 emprestimo bancario de financiamento total da casa somando valor da casa o salario e quantos anos vai pagar não pode exceder 30% da salario#
+# Programa para aprovar um empréstimo bancário para a compra de uma casa.
+# O valor da prestação mensal não pode exceder 30% do salário do comprador.
 
-casa = float(input('Valor da casa: R$ '))
+valor_casa = float(input('Valor da casa: R$ '))
 salario = float(input('Salário do comprador: R$ '))
 anos = int(input('Quantos anos de financiamento? '))
-prestacao = casa / (anos * 12)
-minimo = salario * 30 / 100
 
-print(f'Para pagar uma casa de R$ {casa:.2f} em {anos} anos, a prestação será de R$ {prestacao:.2f}.')
-print(f'O valor máximo da prestação é de R$ {minimo:.2f}.')
+prestacao_mensal = valor_casa / (anos * 12)
+limite_prestacao = salario * 0.30
 
-if prestacao > minimo:
-    print('Empréstimo negado!')
+print(f'\nPara pagar uma casa de R$ {valor_casa:.2f} em {anos} anos, a prestação será de R$ {prestacao_mensal:.2f}.')
+print(f'O valor máximo da prestação, correspondente a 30% do seu salário, é de R$ {limite_prestacao:.2f}.')
+
+if prestacao_mensal > limite_prestacao:
+    print('\nEmpréstimo NEGADO! O valor da prestação excede o seu limite permitido.')
 else:
-    print('Empréstimo aprovado!')
+    print('\nEmpréstimo APROVADO! Parabéns!')
