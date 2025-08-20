@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 01 com Python</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Python no Navegador</h1>
+    <button onclick="runPython()">Executar Python</button>
+    <div id="output"></div>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script>
+        async function runPython() {
+            let pyodide = await loadPyodide();
+            let result = pyodide.runPython('2 + 2');
+            document.getElementById('output').innerText = `Resultado: ${result}`;
+        }
+    </script>
+</body>
+</html>
