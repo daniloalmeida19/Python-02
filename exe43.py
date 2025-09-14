@@ -14,6 +14,7 @@ else:
     print("Risco de VIDA! Você está com OBESIDADE MÓRBIDA.")
     
     
+    
 
 
 
