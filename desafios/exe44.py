@@ -36,4 +36,4 @@ print(f'Sua compra de R$ {preco:.2f} vai custar R$ {total:.2f} no final.')
 #- 2x no cartão: preço normal
 #- 3x ou mais no cartão: 20% de juros
 #Exercício Python 044: Elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento.
-
+ 
